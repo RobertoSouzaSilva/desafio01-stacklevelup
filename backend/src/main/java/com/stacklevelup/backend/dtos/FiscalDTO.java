@@ -1,16 +1,19 @@
 package com.stacklevelup.backend.dtos;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 import com.stacklevelup.backend.entities.Fiscal;
-
-import org.hibernate.validator.constraints.br.CPF;
+import com.stacklevelup.backend.entities.Funcao;
 
 public class FiscalDTO implements Serializable {
     private static final long serialVersionUID = 1L;
+
+    private Long codigo;
 
     @NotBlank
     private String nome;
@@ -23,25 +26,37 @@ public class FiscalDTO implements Serializable {
     private String telefone;
 
     @NotBlank
-    @CPF
     private String cpf;
 
     @NotBlank
     private String tempoExpericencia;
 
-    @NotBlank
     private String funcaoPretendida;
 
     public FiscalDTO() {
     }
     
     public FiscalDTO(Fiscal fiscal) {
+        this.codigo = fiscal.getCodigo();
         this.nome = fiscal.getNome();
         this.email = fiscal.getEmail();
         this.telefone = fiscal.getTelefone();
         this.cpf = fiscal.getCpf();
         this.tempoExpericencia = fiscal.getTempoExpericencia();
         this.funcaoPretendida = fiscal.getFuncaoPretendida();
+    }    
+
+    // public FiscalDTO(Fiscal fiscal, List<Funcao> funcoes) {
+	// 	this(fiscal);
+	// 	funcoes.forEach(funcao -> this.funcoes.add(new FuncaoDTO(funcao)));
+	// }
+
+    public Long getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(Long codigo) {
+        this.codigo = codigo;
     }
 
     public String getNome() {
@@ -91,7 +106,5 @@ public class FiscalDTO implements Serializable {
     public void setFuncaoPretendida(String funcaoPretendida) {
         this.funcaoPretendida = funcaoPretendida;
     }
-
-    
 
 }

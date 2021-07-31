@@ -1,12 +1,16 @@
 package com.stacklevelup.backend.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -23,7 +27,7 @@ public class Fiscal implements Serializable {
     private String cpf;
     @Column(name = "tempo_experiencia")
     private String tempoExpericencia;
-    @Column(name = "funcao_pretendida")
+    @Column(name = "tempo_pretendida")
     private String funcaoPretendida;
 
     public Fiscal() {
@@ -36,7 +40,6 @@ public class Fiscal implements Serializable {
         this.telefone = telefone;
         this.cpf = cpf;
         this.tempoExpericencia = tempoExpericencia;
-        this.funcaoPretendida = funcaoPretendida;
     }
 
     public Long getCodigo() {
@@ -87,6 +90,7 @@ public class Fiscal implements Serializable {
         this.tempoExpericencia = tempoExpericencia;
     }
 
+  
     public String getFuncaoPretendida() {
         return funcaoPretendida;
     }
