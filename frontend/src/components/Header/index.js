@@ -10,7 +10,7 @@ export default function Header(){
                     <Link to="/">Home</Link>
                     <Link to="/cadastrar-fiscal">CadastrarFiscal</Link>
                     <Link to="/deletar-fiscal">DeletarFiscal</Link>
-                    <Link to="/cadastra-funcao">CadastrarFucao</Link>
+                    <Link to="/cadastrar-funcao">CadastrarFuncao</Link>
                 </div>
             </header>
            

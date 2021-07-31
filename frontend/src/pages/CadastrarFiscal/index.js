@@ -38,19 +38,31 @@ export default class CadastrarFiscal extends Component{
             <div>
             <h1>Cadastrar Fiscal</h1>
             <form onSubmit={this.handleSubmit}>
-                <div className="container">
+                <div>
                     <label>Nome: </label>
                     <input type="text" name="nome" value={this.state.nome} onChange={(text) => this.setState({nome: text.target.value})}></input>
+                    <br/>
+                    <br/>
                     <label>CPF: </label>
                     <input type="text" name="cpf" value={this.state.cpf} onChange={(text) => this.setState({cpf: text.target.value})}></input>
+                    <br/>
+                    <br/>
                     <label>Celular: </label>
                     <input type="text" name="telefone" value={this.state.telefone} onChange={(text) => this.setState({telefone: text.target.value})}></input>
+                    <br/>
+                    <br/>
                     <label>Email: </label>
                     <input type="text" name="email" value={this.state.email} onChange={(text) => this.setState({email: text.target.value})}></input>
+                    <br/>
+                    <br/>
                     <label>Tempo de experiência: </label>
                     <input type="text" name="tempoExpericencia" value={this.state.tempoExpericencia} onChange={(text) => this.setState({tempoExpericencia: text.target.value})}></input>
+                    <br/>
+                    <br/>
                     <label>Função Pretendida: </label>
                     <input type="text" name="funcaoPretendida" value={this.state.funcaoPretendida} onChange={(text) => this.setState({funcaoPretendida: text.target.value})}></input>
+                    <br/>
+                    <br/>
                     <button type="submit">Cadastrar</button>
                 </div>
             </form>

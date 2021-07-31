@@ -14,7 +14,7 @@ export const Routes = () => {
                 <Route exact path="/" component={Home}/>
                 <Route path="/cadastrar-fiscal" component={CadastrarFiscal}/>
                 <Route path="/deletar-fiscal" component={DeletarFiscal}/>
-                <Route path="/cadastra-funcao" component={CadastrarFuncao}/>
+                <Route path="/cadastrar-funcao" component={CadastrarFuncao}/>
             </Switch>
         </BrowserRouter>
     );
