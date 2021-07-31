@@ -1,0 +1,23 @@
+header#main-header{
+    background: #272727;
+    height: 40px;
+    border-radius: 20px;
+}
+
+header#main-header .header-content{
+    width: 100%;
+    max-width: 930px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header#main-header .header-content a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
